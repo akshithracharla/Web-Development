@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Web Developer Internship</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:white;
+}
+
+
+nav{
+    background:black;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:orange;
+}
+
+
+.hero{
+    background:linear-gradient(to right,#007bff,#00c6ff);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:white;
+    color:blue;
+    text-decoration:none;
+    border-radius:5px;
+    margin:10px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:white;
+}
+
+
+section{
+    padding:50px 20px;
+    text-align:center;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    width:280px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px lightgray;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    transition:0.3s;
+}
+
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+        margin-top:10px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<nav>
+
+<div class="logo">
+Primeor Internship
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Benefits</a></li>
+<li><a href="#">Skills</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<section class="hero">
+
+<h1>
+Web Developer Internship Program
+</h1>
+
+<p>
+Gain real-world experience and build
+professional web development projects.
+</p>
+
+<a href="#" class="btn">Apply Now</a>
+
+<a href="#" class="btn">Learn More</a>
+
+</section>
+
+
+<section>
+
+<h2>Internship Benefits</h2>
+
+<br>
+
+<div class="cards">
+
+<div class="card">
+<h3>Real-World Experience</h3>
+<p>Work on practical industry projects.</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Development</h3>
+<p>Create impressive projects for your resume.</p>
+</div>
+
+<div class="card">
+<h3>Frontend Exposure</h3>
+<p>Learn HTML, CSS, JavaScript and Bootstrap.</p>
+</div>
+
+<div class="card">
+<h3>Hands-On Projects</h3>
+<p>Develop professional websites from scratch.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Required Skills</h2>
+
+<br>
+
+<div class="cards">
+
+<div class="card">
+HTML5
+</div>
+
+<div class="card">
+CSS3
+</div>
+
+<div class="card">
+JavaScript
+</div>
+
+<div class="card">
+Bootstrap
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>Contact Information</h2>
+
+<br>
+
+<p>🌐 Website: www.primeorsolutions.com</p>
+
+<p>📧 Email: akshithchinna123@gmail.com</p>
+
+<p>💼 LinkedIn: linkedin.com/company/primeorsolutions</p>
+
+<p>📍 Location: India</p>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Web Developer Internship Program
+</p>
+
+</footer>
+
+</body>
+</html>

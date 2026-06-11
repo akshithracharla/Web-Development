@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Gallery & Slideshow</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    text-align:center;
+}
+
+h1{
+    margin:20px;
+}
+
+
+.slider{
+    width:80%;
+    height:400px;
+    margin:20px auto;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.slider img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
+
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    margin:30px;
+}
+
+.gallery img{
+    width:250px;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px gray;
+}
+
+
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+}
+
+.popup img{
+    width:70%;
+    max-width:800px;
+    margin-top:50px;
+    border-radius:10px;
+}
+
+.close{
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+    position:absolute;
+    top:20px;
+    right:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Image Gallery & Slideshow</h1>
+
+
+
+<div class="slider">
+    <img id="slide"
+    src="https://picsum.photos/id/1015/900/400">
+</div>
+
+
+<div class="gallery">
+
+<img src="https://picsum.photos/id/1015/300/200"
+onclick="openImage(this.src)">
+
+<img src="https://picsum.photos/id/1016/300/200"
+onclick="openImage(this.src)">
+
+<img src="https://picsum.photos/id/1018/300/200"
+onclick="openImage(this.src)">
+
+<img src="https://picsum.photos/id/1020/300/200"
+onclick="openImage(this.src)">
+
+</div>
+
+
+
+<div class="popup" id="popup">
+
+<span class="close"
+onclick="closeImage()">&times;</span>
+
+<img id="popupImg">
+
+</div>
+
+<script>
+
+
+
+let images=[
+"https://picsum.photos/id/1015/900/400",
+"https://picsum.photos/id/1016/900/400",
+"https://picsum.photos/id/1018/900/400",
+"https://picsum.photos/id/1020/900/400"
+];
+
+let index=0;
+
+setInterval(function(){
+
+index++;
+
+if(index>=images.length){
+    index=0;
+}
+
+document.getElementById("slide").src=
+images[index];
+
+},3000);
+
+
+
+function openImage(src){
+
+document.getElementById("popup")
+.style.display="block";
+
+document.getElementById("popupImg")
+.src=src;
+
+}
+
+function closeImage(){
+
+document.getElementById("popup")
+.style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>
